@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PixeLArt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>PixeLArt</h1>
+
+    <div id="curseur" ></div>
+
+    <canvas id="game"></canvas>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+
+    <div style="position: fixed; right: 50px; top: 80px; background: #f0f0f0; padding: 16px; border-radius: 8px;">
+        <label>Rouge (0-255): <input type="number" id="red" min="0" max="255" value="0"></label><br>
+        <label>Vert (0-255): <input type="number" id="green" min="0" max="255" value="0"></label><br>
+        <label>Bleu (0-255): <input type="number" id="blue" min="0" max="255" value="0"></label><br>
+        <label>Colonne: <input type="number" id="col" min="0" value="0"></label><br>
+        <label>Ligne: <input type="number" id="row" min="0" value="0"></label><br>
+        <button id="placePixel" onclick="placePixel()">Placer le pixel</button>
+    </div>
+    
+</body>
+</html>

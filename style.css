@@ -1,0 +1,33 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap");
+body {
+  margin: 0;
+}
+
+h1 {
+  color: blue;
+  font-size: 2em;
+  font-family: "Bitcount Grid Double", system-ui;
+  font-optical-sizing: auto;
+  font-size: 5em;
+  font-weight: 372;
+  font-style: normal;
+  font-variation-settings: "slnt" -6, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+}
+
+#game {
+  width: 1200px;
+  height: 600px;
+  box-shadow: 1px 1px 10px rgba(168, 86, 86, 0.5);
+  cursor: none;
+}
+
+#curseur {
+  position: absolute;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: none;
+}/*# sourceMappingURL=style.css.map */
