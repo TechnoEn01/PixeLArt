@@ -117,3 +117,18 @@ db.collection('pixels').onSnapshot((snapshot) => {
     });
 }); // <-- parenthèse et point-virgule ajoutés ici
 // ...existing code...
+
+import { Vercel } from "@vercel/sdk";
+
+const vercel = new Vercel();
+
+async function run() {
+  const result = await vercel.marketplace.exchangeSsoToken({
+    code: "<value>",
+    clientId: "<id>",
+    clientSecret: "<value>",
+  });
+  console.log(result);
+}
+
+run();
