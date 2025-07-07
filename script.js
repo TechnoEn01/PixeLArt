@@ -1,6 +1,11 @@
+import { Vercel } from "@vercel/sdk";
+
 const game = document.querySelector('#game');
 const curseur = document.querySelector('#curseur');
 const grilleCellSize = 10;
+
+
+const vercel = new Vercel();
 
 const ctx = game.getContext('2d');
 const grille =game.getContext('2d');
@@ -118,9 +123,7 @@ db.collection('pixels').onSnapshot((snapshot) => {
 }); // <-- parenthèse et point-virgule ajoutés ici
 // ...existing code...
 
-import { Vercel } from "@vercel/sdk";
 
-const vercel = new Vercel();
 
 async function run() {
   const result = await vercel.marketplace.exchangeSsoToken({
