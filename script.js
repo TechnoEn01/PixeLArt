@@ -106,3 +106,14 @@ game.addEventListener('mousemove', function(event){
     curseur.title = '';
 })
 
+// ...existing code...
+db.collection('pixels').onSnapshot((snapshot) => {
+    snapshot.docChanges().forEach((change) => {
+        if (change.type === 'added' || change.type === 'modified') {
+            const pixel = change.doc.data();
+            ctx.fillStyle = pixel.color;
+            ctx.fillRect(pixel.col * pixelSize, pixel.row * pixelSize, pixelSize, pixelSize);
+        }
+    });
+}); // <-- parenthèse et point-virgule ajoutés ici
+// ...existing code...
