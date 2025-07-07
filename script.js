@@ -1,4 +1,4 @@
-import { Vercel } from "@vercel/sdk";
+import { Vercel } from "https://esm.sh/@vercel/sdk";
 
 const game = document.querySelector('#game');
 const curseur = document.querySelector('#curseur');
